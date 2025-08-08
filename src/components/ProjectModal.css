@@ -1,0 +1,240 @@
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  padding: 1rem;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.modal {
+  background-color: var(--white);
+  border-radius: 1.5rem;
+  max-width: 900px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-30px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.modal__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 2rem 2rem 1rem;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.modal__title-section {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.modal__title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin: 0;
+}
+
+.modal__year {
+  background-color: var(--primary-color);
+  color: var(--white);
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.modal__close {
+  background: none;
+  border: none;
+  color: var(--text-light);
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.modal__close:hover {
+  background-color: var(--bg-light);
+  color: var(--text-dark);
+}
+
+.modal__content {
+  padding: 2rem;
+}
+
+.modal__image {
+  margin-bottom: 2rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal__image-placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.modal__info {
+  display: grid;
+  gap: 2rem;
+}
+
+.modal__info h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.modal__description p {
+  color: var(--text-light);
+  line-height: 1.7;
+  margin: 0;
+}
+
+.modal__tech-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.modal__tech-tag {
+  background-color: var(--bg-light);
+  color: var(--text-dark);
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border: 1px solid var(--border-light);
+}
+
+.modal__features-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.modal__feature-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--text-light);
+  font-size: 1rem;
+}
+
+.modal__feature-item svg {
+  color: var(--primary-color);
+  flex-shrink: 0;
+}
+
+.modal__status {
+  padding: 1.5rem;
+  background-color: var(--bg-light);
+  border-radius: 1rem;
+}
+
+.modal__status-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.modal__status-item strong {
+  color: var(--text-dark);
+}
+
+.modal__status-badge {
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.modal__status-badge--terminé {
+  background-color: #10b981;
+  color: white;
+}
+
+.modal__status-badge--en-cours {
+  background-color: #f59e0b;
+  color: white;
+}
+
+.modal__actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-light);
+}
+
+@media (max-width: 767px) {
+  .modal {
+    margin: 0;
+    border-radius: 1rem 1rem 0 0;
+    max-height: 95vh;
+  }
+  
+  .modal__header {
+    padding: 1.5rem 1.5rem 1rem;
+  }
+  
+  .modal__content {
+    padding: 1.5rem;
+  }
+  
+  .modal__title {
+    font-size: 1.5rem;
+  }
+  
+  .modal__title-section {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  
+  .modal__actions {
+    flex-direction: column;
+  }
+}

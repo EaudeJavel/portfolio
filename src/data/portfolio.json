@@ -1,0 +1,164 @@
+{
+  "personal": {
+    "name": "Paul",
+    "title": "Développeur Web Full-Stack",
+    "subtitle": "Passionné par la création d'expériences digitales modernes et performantes",
+    "description": "Développeur web avec une expertise en React, JavaScript et les technologies modernes. Je crée des applications web responsive et performantes avec une attention particulière à l'expérience utilisateur et aux bonnes pratiques de développement.",
+    "location": "France",
+    "email": "p.plamy6@gmail.com",
+    "phone": "+33 6 83 54 85 49",
+    "linkedin": "https://linkedin.com/in/paul-dev",
+    "github": "https://github.com/EaudeJavel",
+    "website": "https://paul-dev.fr"
+  },
+  "skills": {
+    "frontend": [
+      {
+        "name": "React",
+        "level": 90,
+        "category": "Framework"
+      },
+      {
+        "name": "JavaScript (ES6+)",
+        "level": 95,
+        "category": "Language"
+      },
+      {
+        "name": "TypeScript",
+        "level": 85,
+        "category": "Language"
+      },
+      {
+        "name": "React Native",
+        "level": 90,
+        "category": "Markup"
+      },
+      {
+        "name": "CSS3 / Sass",
+        "level": 90,
+        "category": "Styling"
+      },
+      {
+        "name": "Tailwind CSS",
+        "level": 90,
+        "category": "Framework"
+      }
+    ],
+    "backend": [
+      {
+        "name": "Node.js",
+        "level": 80,
+        "category": "Runtime"
+      },
+      {
+        "name": "Express.js",
+        "level": 75,
+        "category": "Framework"
+      },
+      {
+        "name": "MongoDB",
+        "level": 70,
+        "category": "Database"
+      },
+      {
+        "name": "PostgreSQL",
+        "level": 80,
+        "category": "Database"
+      }
+    ],
+    "tools": [
+      {
+        "name": "Git / GitHub",
+        "level": 90,
+        "category": "Version Control"
+      },
+      {
+        "name": "Webpack / Vite",
+        "level": 80,
+        "category": "Build Tools"
+      },
+      {
+        "name": "Jest / Testing Library",
+        "level": 75,
+        "category": "Testing"
+      },
+      {
+        "name": "Figma",
+        "level": 80,
+        "category": "Design"
+      }
+    ]
+  },
+  "experience": [
+    {
+      "title": "Développeur Fullstack mobile",
+      "company": "Redesk",
+      "period": "2024 - Présent",
+      "description": "Développement d'applications modernes avec React Native et Vue. Collaboration avec l'équipe UX/UI pour créer des interfaces utilisateur intuitives et responsives.",
+      "technologies": ["React Native", "TypeScript", "Vuejs", "Tailwind CSS", "Jest"]
+    },
+    {
+      "title": "CTO",
+      "company": "L'Effet Pap",
+      "period": "2022 - 2023",
+      "description": "Création d'une marketplace web avec Wordpress. Optimisation des performances et du SEO.",
+      "technologies": ["HTML", "CSS", "JavaScript", "Wordpress", "Sass"]
+    }
+  ],
+  "education": [
+    {
+      "degree": "Formation Développeur Web",
+      "school": "OpenClassrooms",
+      "period": "2024-2025",
+      "description": "Formation en développement web full-stack avec projets pratiques."
+    },
+     {
+      "degree": "Formation généraliste web",
+      "school": "HETIC",
+      "period": "2016-2021",
+      "description": "Formation généraliste web avec projets pratiques."
+    }
+  ],
+  "projects": [
+    {
+      "id": 1,
+      "title": "E-commerce React",
+      "description": "Application e-commerce complète développée avec React et Redux. Interface moderne avec gestion du panier, authentification utilisateur et intégration de paiement.",
+      "longDescription": "Cette application e-commerce a été développée pour démontrer ma maîtrise des technologies React modernes. Elle inclut une interface utilisateur responsive, un système de gestion d'état avec Redux, l'authentification JWT, et l'intégration avec une API REST. Le projet met l'accent sur les performances, l'accessibilité et l'expérience utilisateur.",
+      "technologies": ["React", "Redux", "Node.js", "Express", "MongoDB", "Stripe API"],
+      "features": [
+        "Interface utilisateur responsive",
+        "Gestion du panier d'achat",
+        "Authentification utilisateur",
+        "Système de paiement sécurisé",
+        "Panel d'administration",
+        "API REST complète"
+      ],
+      "image": "/images/project1.jpg",
+      "github": "https://github.com/paul-dev/ecommerce-react",
+      "demo": "https://ecommerce-react-demo.netlify.app",
+      "status": "Terminé",
+      "year": "2023"
+    },
+    {
+      "id": 2,
+      "title": "Dashboard Analytics",
+      "description": "Dashboard interactif de visualisation de données développé avec React et D3.js. Graphiques dynamiques, filtres avancés et exports de données.",
+      "longDescription": "Un dashboard moderne pour l'analyse de données business avec des graphiques interactifs créés avec D3.js et React. L'application permet de visualiser les KPIs, filtrer les données par période et exporter les rapports. L'interface est entièrement responsive et optimisée pour les performances même avec de gros volumes de données.",
+      "technologies": ["React", "D3.js", "Chart.js", "Material-UI", "Node.js", "PostgreSQL"],
+      "features": [
+        "Graphiques interactifs en temps réel",
+        "Filtres dynamiques par date/catégorie",
+        "Export de données (PDF, Excel)",
+        "Interface responsive",
+        "Authentification multi-rôles",
+        "API de données temps réel"
+      ],
+      "image": "/images/project2.jpg",
+      "github": "https://github.com/paul-dev/dashboard-analytics",
+      "demo": "https://dashboard-analytics-demo.herokuapp.com",
+      "status": "Terminé",
+      "year": "2023"
+    }
+  ]
+}
