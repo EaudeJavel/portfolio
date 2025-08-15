@@ -29,10 +29,6 @@
   margin: 0;
 }
 
-.header__nav {
-  display: none;
-}
-
 @media (min-width: 768px) {
   .header__nav {
     display: block;
@@ -107,6 +103,7 @@
 
 @media (max-width: 767px) {
   .header__nav {
+    display: block;
     position: absolute;
     top: 100%;
     left: 0;
