@@ -41,13 +41,30 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault()
     setIsSubmitting(true)
-    
-    // Simulation d'envoi (remplacer par votre logique d'envoi)
-    await new Promise(resolve => setTimeout(resolve, 1000))
-    
-    alert('Merci pour votre message ! Je vous répondrai dans les plus brefs délais.')
-    setFormData({ name: '', email: '', message: '' })
-    setIsSubmitting(false)
+
+    try {
+      const response = await fetch('http://localhost:3001/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData)
+      })
+
+      const data = await response.json()
+
+      if (data.success) {
+        alert('Merci pour votre message ! Je vous répondrai dans les plus brefs délais.')
+        setFormData({ name: '', email: '', message: '' })
+      } else {
+        alert(`Erreur : ${data.error}`)
+      }
+    } catch (error) {
+      console.error('Erreur lors de l\'envoi du message:', error)
+      alert('Erreur lors de l\'envoi du message. Veuillez réessayer.')
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
@@ -55,13 +72,13 @@ const Contact = () => {
       <div className="container">
         <div className={`contact__content ${isVisible ? 'fade-in' : ''}`}>
           <h2 className="section-title">Contactez-moi</h2>
-          
+
           <div className="contact__grid">
             <div className="contact__info">
               <div className="contact__intro">
                 <h3>Travaillons ensemble</h3>
                 <p>
-                  Vous avez un projet en tête ? Une question sur mon travail ? 
+                  Vous avez un projet en tête ? Une question sur mon travail ?
                   N'hésitez pas à me contacter. Je serais ravi de discuter avec vous !
                 </p>
               </div>
@@ -109,7 +126,7 @@ const Contact = () => {
               <div className="contact__social">
                 <h4>Retrouvez-moi aussi sur</h4>
                 <div className="contact__social-links">
-                  <a 
+                  <a
                     href={personal.linkedin}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -123,8 +140,8 @@ const Contact = () => {
                     </svg>
                     LinkedIn
                   </a>
-                  
-                  <a 
+
+                  <a
                     href={personal.github}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -187,8 +204,8 @@ const Contact = () => {
                   ></textarea>
                 </div>
 
-                <button 
-                  type="submit" 
+                <button
+                  type="submit"
                   className="btn btn-primary contact__submit"
                   disabled={isSubmitting}
                 >
